@@ -55,7 +55,7 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
 	</build>
 ```
  - **jarLocation**: This is the location of the input jar. It is important for the jar to be generated before this task is ran. After the jar is generated it will be recompiled by the android dalvik compiler and exported. It then can be used on any android device as a library or expansion pack.
-  - **adbLocation**: This is the location of the adb executable. This is required to install a jar onto the android device. It cannot be the platform-tools directory but the actual file. If it is invalid or can not be found an exception will be thrown. The path to your OS and adb install *%Android SDK Location%/platform-tools/adb*
+ - **adbLocation**: This is the location of the adb executable. This is required to install a jar onto the android device. It cannot be the platform-tools directory but the actual file. If it is invalid or can not be found an exception will be thrown. The path to your OS and adb install *%Android SDK Location%/platform-tools/adb*
  
  ### Additional Options
  *Here are options for the more advanced user or someone looking to customize the way ADB works. It is recommended that you do not use all of these because they may affect and or break if improperly setup*
