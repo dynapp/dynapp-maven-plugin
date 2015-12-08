@@ -41,7 +41,7 @@ public abstract class DynappMojo extends AbstractMojo {
 	 * This is the name of the .jar file. The .jar suffix is automatically
 	 * appended on during file generation so do not put the file type in
 	 * for the value. Also certain characters are removed from the file
-	 * to prevent OS errors. It is reccommended not to modify this name.
+	 * to prevent OS errors. It is recommended not to modify this name.
 	 */
 	@Parameter(required = false, defaultValue = "dalvik-android")
 	private String buildName;

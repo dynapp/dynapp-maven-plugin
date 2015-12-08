@@ -54,8 +54,8 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
 		</plugins>
 	</build>
 ```
- - **jarLocation**: Jar location is the relative path of your exported Jar relative to your project.
- - **adbLocation**: The path to your OS and install *%Android SDK Location%/platform-tools/adb*
+ - **jarLocation**: This is the location of the input jar. It is important for the jar to be generated before this task is ran. After the jar is generated it will be recompiled by the android dalvik compiler and exported. It then can be used on any android device as a library or expansion pack.
+  - **adbLocation**: This is the location of the adb executable. This is required to install a jar onto the android device. It cannot be the platform-tools directory but the actual file. If it is invalid or can not be found an exception will be thrown. The path to your OS and adb install *%Android SDK Location%/platform-tools/adb*
  
  ### Additional Options
  *Here are options for the more advanced user or someone looking to customize the way ADB works. It is recommended that you do not use all of these because they may affect and or break if improperly setup*
@@ -69,10 +69,18 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
 				<configuration>
 					<jarLocation></jarLocation>
 					<adbLocation></adbLocation>
+					<buildDir></buildDir>
+					<buildName></buildName>
+					<devices>
+						<device></device>
+					</devices>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 ```
- - **jarLocation**: Jar location is the relative path of your exported Jar relative to your project.
- - **adbLocation**: The path to your OS and install *%Android SDK Location%/platform-tools/adb*
+ - **jarLocation**: This is the location of the input jar. It is important for the jar to be generated before this task is ran. After the jar is generated it will be recompiled by the android dalvik compiler and exported. It then can be used on any android device as a library or expansion pack.
+ - **adbLocation**: This is the location of the adb executable. This is required to install a jar onto the android device. It cannot be the platform-tools directory but the actual file. If it is invalid or can not be found an exception will be thrown. The path to your OS and adb install *%Android SDK Location%/platform-tools/adb*
+ - **buildDir**: This is the location where the dalvik compiled Jar will go. This must be a directory and it does not have to exist. If you do not have a custom location to place to jar then there is no reason to change this value.
+ - **buildName**: This is the name of the .jar file. The .jar suffix is automatically appended on during file generation so do not put the file type in for the value. Also certain characters are removed from the file to prevent OS errors. It is recommended not to modify this name.
+ - **devices**: This is the list of preselected devices to install the dalvik jar to. This is ideal for not having to continually select a device. Add a list of device ID's to automatically select a device to install to.
