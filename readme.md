@@ -36,7 +36,17 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
 > looking like it's been marked up with tags
 > or formatting instructions.
 
-##Maven Options
+## Maven Options
+### Maven Repository
+Added the following repository to your maven list. This hosts the robot core library and the plugin. It is Dynapp's central repository and acts as a medium for jar hosting. 
+tng. 
+```
+<repository>
+    <id>net.dynapp</id>
+    <name>Dynapp</name>
+    <url>https://raw.githubusercontent.com/dynapp/maven-repository/master/repo/</url>
+</repository>
+```
 ### Required Options
 *These are all the required parameters to run the most basic version of dynapp maven plugin. There are more options for advanced users*
 ```xml
@@ -57,7 +67,7 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
  - **jarLocation**: This is the location of the input jar. It is important for the jar to be generated before this task is ran. After the jar is generated it will be recompiled by the android dalvik compiler and exported. It then can be used on any android device as a library or expansion pack.
  - **adbLocation**: This is the location of the adb executable. This is required to install a jar onto the android device. It cannot be the platform-tools directory but the actual file. If it is invalid or can not be found an exception will be thrown. The path to your OS and adb install *%Android SDK Location%/platform-tools/adb*
  
- ### Additional Options
+### Additional Options
  *Here are options for the more advanced user or someone looking to customize the way ADB works. It is recommended that you do not use all of these because they may affect and or break if improperly setup*
  ```xml
 	<build>
