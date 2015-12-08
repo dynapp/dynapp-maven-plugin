@@ -40,7 +40,7 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
 ### Maven Repository
 Added the following repository to your maven list. This hosts the robot core library and the plugin. It is Dynapp's central repository and acts as a medium for jar hosting. 
 tng. 
-```
+```xml
 <repository>
     <id>net.dynapp</id>
     <name>Dynapp</name>
