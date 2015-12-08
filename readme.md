@@ -28,14 +28,6 @@ The plugin handles installing dalvik compiled jars to the android devices. The s
  4. Click "Apply" and ensure the status says installed afterwards.
  5. The path to your adb should be should be **%Android SDK Location%/platform-tools/adb** replace the **%Android SDK Location%** with the path highlighted in the photo *(Relative to your operating system)*
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
 ## Maven Options
 ### Maven Repository
 Added the following repository to your maven list. This hosts the robot core library and the plugin. It is Dynapp's central repository and acts as a medium for jar hosting. 
