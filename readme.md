@@ -93,4 +93,4 @@ tng.
 
 ## Licensee
 
-MIT Licensee
+The MIT License (MIT)
