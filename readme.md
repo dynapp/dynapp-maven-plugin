@@ -86,3 +86,11 @@ tng.
  - **buildDir**: This is the location where the dalvik compiled Jar will go. This must be a directory and it does not have to exist. If you do not have a custom location to place to jar then there is no reason to change this value.
  - **buildName**: This is the name of the .jar file. The .jar suffix is automatically appended on during file generation so do not put the file type in for the value. Also certain characters are removed from the file to prevent OS errors. It is recommended not to modify this name.
  - **devices**: This is the list of preselected devices to install the dalvik jar to. This is ideal for not having to continually select a device. Add a list of device ID's to automatically select a device to install to.
+ 
+## Latest Version
+
+1.5.0
+
+## Licensee
+
+MIT Licensee

@@ -4,7 +4,7 @@
 
 	<groupId>net.dynapp.installer</groupId>
 	<artifactId>dynapp-maven-plugin</artifactId>
-	<version>1.3.0</version>
+	<version>1.5.0</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Dynapp Dalvik Compile and Install</name>
